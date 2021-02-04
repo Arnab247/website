@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import random
 app = Flask(__name__)
+
+userName = []
 
 def open_file(grade, subject):
     infile = open('files/{}/{}.txt'.format(grade, subject), 'r')
@@ -27,8 +29,11 @@ def main():
 
 @app.route("/biology30S", methods=["GET", "POST"])
 def biology30S():
+    global userName
+    while len(userName) > 1:
+        userName.pop()
     if request.method == "GET":
-        return render_template('grade-11/biology.html', question="Test Yourself!", answer="Click one of the options below...")
+        return render_template('grade-11/biology.html', question="Test Yourself!", answer="Click one of the options below...", name=userName[0])
     else:
         text = open_file("11", "biology")
         print(text)
@@ -47,12 +52,27 @@ def biology30S():
         else:
             text = find_unit(text)
             text = find_question(text)
-        return render_template('grade-11/biology.html', question=text[0], answer=text[1])
+        # return redirect('/biology30S/{}'.format(name), question=text[0], answer=text[1])
+        return render_template('grade-11/biology.html', question=text[0], answer=text[1], name=userName[0])
 
-@app.route("/<name>")
+@app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
-    name = name
-    return render_template('welcome-home.html', hi=name)
+    global userName
+    for n in range(len(userName)):
+        if userName[n] == 'favicon.ico':
+            userName.remove(userName[n])
+    if request.method == "GET":
+        userName.append(name)
+        if userName[0] == 'favicon.ico':
+            return render_template('welcome-home.html', hi=userName[1])
+        else:
+            return render_template('welcome-home.html', hi=userName[0])
+    else:
+        print('hi')
+        print(request.form.get('Biology'))
+        print(userName)
+        if request.form.get('Biology') == 'Biology':
+            return redirect(url_for('biology30S'))
 
 if __name__ == '__main__':
     app.run(debug=True)
