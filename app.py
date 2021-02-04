@@ -75,5 +75,9 @@ def hello(name):
             return redirect(url_for('biology30S'))
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     # app.run(debug=True)
     app.run(debug=False, host='0.0.0.0')
+=======
+    app.run(debug=False, host='0.0.0.0')
+>>>>>>> 3b0c493418c33c79b0a2ba627d41c851e6814c2d
