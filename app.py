@@ -29,11 +29,11 @@ def main():
 
 @app.route("/biology30S", methods=["GET", "POST"])
 def biology30S():
-    global userName
-    while len(userName) > 1:
-        userName.pop()
+    # global userName
+    # while len(userName) > 1:
+    #     userName.pop()
     if request.method == "GET":
-        return render_template('grade-11/biology.html', question="Test Yourself!", answer="Click one of the options below...", name=userName[0])
+        return render_template('grade-11/biology.html', question="Test Yourself!", answer="Click one of the options below...")
     else:
         text = open_file("11", "biology")
         print(text)
@@ -53,20 +53,21 @@ def biology30S():
             text = find_unit(text)
             text = find_question(text)
         # return redirect('/biology30S/{}'.format(name), question=text[0], answer=text[1])
-        return render_template('grade-11/biology.html', question=text[0], answer=text[1], name=userName[0])
+        return render_template('grade-11/biology.html', question=text[0], answer=text[1])
 
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
     global userName
-    for n in range(len(userName)):
-        if userName[n] == 'favicon.ico':
-            userName.remove(userName[n])
+    # for n in range(len(userName)):
+    #     if userName[n] == 'favicon.ico':
+    #         userName.remove(userName[n])
     if request.method == "GET":
-        userName.append(name)
-        if userName[0] == 'favicon.ico':
-            return render_template('welcome-home.html', hi=userName[1])
-        else:
-            return render_template('welcome-home.html', hi=userName[0])
+    #     userName.append(name)
+    #     if userName[0] == 'favicon.ico':
+    #         return render_template('welcome-home.html', hi=userName[1])
+    #     else:
+    #         return render_template('welcome-home.html', hi=userName[0])
+        render_template('welcome-home.html', name=name)
     else:
         print('hi')
         print(request.form.get('Biology'))
@@ -75,9 +76,5 @@ def hello(name):
             return redirect(url_for('biology30S'))
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     # app.run(debug=True)
     app.run(debug=False, host='0.0.0.0')
-=======
-    app.run(debug=False, host='0.0.0.0')
->>>>>>> 3b0c493418c33c79b0a2ba627d41c851e6814c2d
