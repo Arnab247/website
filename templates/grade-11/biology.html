@@ -1,0 +1,35 @@
+{% extends "quiz.html" %}
+
+{% block subject %}
+Biology 30S
+{% endblock %}
+
+{% block body %}
+<style>
+.unit-selector {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.units {
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 15px;
+    border: 0px;
+    cursor: pointer;
+}
+</style>
+
+<form action="/biology30S", method="post" class="unit-selector">
+    <input type="submit", value="Protection and Control" class="units">
+    <input type="submit", value="Homeostasis and Wellness" class="units">
+    <input type="submit", value="Digestion and Nutrition" class="units">
+    <input type="submit", value="Biochemistry" class="units">
+    <input type="submit", value="Transportation and Respiration" class="units">
+    <input type="submit", value="Excretion and Waste Management" class="units">
+    <div></div>
+    <input type="submit", value="Biology 30S" class="units">
+</form>
+{% endblock %}
