@@ -36,7 +36,6 @@ def biology30S():
         return render_template('grade-11/biology.html', question="Test Yourself!", answer="Click one of the options below...")
     else:
         text = open_file("11", "biology")
-        print(text)
         if request.form.get('1') == 'Homeostasis and Wellness':
             text = find_question(text[0])
         elif request.form.get('2') == 'Digestion and Nutrition':
