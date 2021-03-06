@@ -54,6 +54,10 @@ def biology30S():
         # return redirect('/biology30S/{}'.format(name), question=text[0], answer=text[1])
         return render_template('grade-11/biology.html', question=text[0], answer=text[1])
 
+@app.route("/ivyisthebest")
+def ivy:
+    return render_template("ivy.html")
+
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
     global userName
