@@ -55,7 +55,7 @@ def biology30S():
         return render_template('grade-11/biology.html', question=text[0], answer=text[1])
 
 @app.route("/ivyisthebest")
-def ivy:
+def ivy():
     return render_template("ivy.html")
 
 @app.route("/<name>", methods=["GET", "POST"])
