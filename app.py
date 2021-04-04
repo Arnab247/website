@@ -19,6 +19,12 @@ def find_question(data):
     x = 2*x - 2
     return [data[x], data[x+1]]
 
+def find_question_mc4(data):
+    data = data.split("! !")
+    x = random.randint(1, (len(data)/2))
+    x = 2*x - 2
+    return [data[x], data[x+1]]
+
 @app.route("/")
 def main():
     return render_template('home.html')
@@ -37,6 +43,17 @@ def biology30S():
 def hello(name):
     name = name
     return render_template('welcome-home.html', hi=name)
+
+@app.route("/driverz")
+def driverz():
+    if request.method == "GET":
+        return render_template('', progress="0")
+    else:
+        progressc = 
+        text = open_file("na", "driverZ")
+        text = find_question_mc4(text)
+        answers = text[1].split(",")
+        return render_template('', question=text[0], answer1=answers[0], answer2 = answers[1], answer3 = answers[2], answer4=answers[3], answer5 = answers[4])
 
 if __name__ == '__main__':
 #     app.run(debug=True)
