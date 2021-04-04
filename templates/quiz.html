@@ -12,14 +12,7 @@
         </style>
         <h1 style="text-align: center; padding-bottom: 15px;">{% block subject %}{% endblock %}</h1>
 
-        <div>
-            <h2 style="color: #3f3c3d; text-align: center; margin-left: 25%; margin-right: 25%; border-radius: 15px; background-color: #18c7f2; padding: 15px;">{{question}}</h2>
-            <div style="color: #3f3c3d; text-align: center; margin-left: 25%; margin-right: 25%; border-radius: 15px; background-color: #18c7f2; padding: 15px;" onclick="document.getElementById('answer').innerHTML=document.getElementById('answer-block').innerHTML;" class="answer" id="answer1">
-                <div id="answerbtn" style="background-color: transparent; border: 0px; padding: 15px; font-size: small;" onclick=" document.getElementById('answer1').className='A'">
-                    <h2 id="answer" style="color: #3f3c3d;">Click to Reveal</h2>
-                </div>
-                </div>
-        </div>
+        
         {% block body %}
         {% endblock %}
         <div id='answer-block', style="visibility: hidden;">
