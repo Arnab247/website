@@ -83,6 +83,7 @@ def driverz():
     if request.method == "GET":
         return render_template('driverz.html', question="Start", answer1="Start", answer2 ="Start", answer3 ="Start", answer4="Start", answer5 ="Start")
     else:
+        print(text)
         text = open_file("na", "driverz")
         text = find_question(text)
         answers = text[1].split(",")
