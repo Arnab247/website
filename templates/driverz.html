@@ -23,11 +23,9 @@ Biology 30S
 </style>
 
 <form action="/biology30S", method="post" class="unit-selector">
-    <input type="submit", value="Homeostasis and Wellness" class="units" name='1'>
+    <input type="submit", value={{ answer1 }}, class="units" name='1'>
     <input type="submit", value="Digestion and Nutrition" class="units" name='2'>
     <input type="submit", value="Biochemistry" class="units" name='3'>
     <input type="submit", value="Transportation and Respiration" class="units" name='4'>
-    <div></div>
-    <input type="submit", value="Biology 30S" class="units" name='7'>
 </form>
 {% endblock %}
