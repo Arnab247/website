@@ -86,6 +86,7 @@ def driverz():
         text = open_file("na", "driverz")
         text = find_question(text)
         answers = text[1].split(",")
+        print(answers)
         return render_template('driverz.html', question=text[0], answer1=answers[0], answer2 = answers[1], answer3 = answers[2], answer4=answers[3], answer5 = answers[4])
 
 
