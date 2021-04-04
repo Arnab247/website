@@ -22,6 +22,15 @@ Biology 30S
 }
 </style>
 
+<div>
+    <h2 style="color: #3f3c3d; text-align: center; margin-left: 25%; margin-right: 25%; border-radius: 15px; background-color: #18c7f2; padding: 15px;">{{question}}</h2>
+    <div style="color: #3f3c3d; text-align: center; margin-left: 25%; margin-right: 25%; border-radius: 15px; background-color: #18c7f2; padding: 15px;" onclick="document.getElementById('answer').innerHTML=document.getElementById('answer-block').innerHTML;" class="answer" id="answer1">
+        <div id="answerbtn" style="background-color: transparent; border: 0px; padding: 15px; font-size: small;" onclick=" document.getElementById('answer1').className='A'">
+            <h2 id="answer" style="color: #3f3c3d;">Click to Reveal</h2>
+        </div>
+    </div>
+</div>
+
 <form action="/biology30S", method="post" class="unit-selector">
     <input type="submit", value="Homeostasis and Wellness" class="units" name='1'>
     <input type="submit", value="Digestion and Nutrition" class="units" name='2'>
