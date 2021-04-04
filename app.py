@@ -77,6 +77,18 @@ def hello(name):
         print(userName)
         if request.form.get('Biology') == 'Biology':
             return redirect(url_for('biology30S'))
+        
+@app.route("/driverz")
+def driverz():
+    if request.method == "GET":
+        return render_template('', progress="0")
+    else:
+        progressc = 
+        text = open_file("na", "driverZ")
+        text = find_question_mc4(text)
+        answers = text[1].split(",")
+        return render_template('', question=text[0], answer1=answers[0], answer2 = answers[1], answer3 = answers[2], answer4=answers[3], answer5 = answers[4])
+
 
 if __name__ == '__main__':
     # app.run(debug=True)
