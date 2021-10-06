@@ -66,6 +66,25 @@ def historicalthinkingassignment():
 def historicalsignificance():
     return render_template("historicalsignificance.html")
 
+@app.route("/continuityandchange")
+def continuityandchange():
+    return render_template("continuityandchange.html")
+
+@app.route("/causeandconsequence")
+def historicalsignificance():
+    return render_template("causeandconsequence.html")
+
+@app.route("/historicalperspective")
+def historicalperspective():
+    return render_template("historicalperspective.html")
+
+@app.route("/ethicaldimensions")
+def ethicaldimensions():
+    return render_template("ethicaldimensions.html")
+
+
+
+
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
     global userName
