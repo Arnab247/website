@@ -64,7 +64,7 @@ def historicalthinkingassignment():
 
 @app.route("/historicalsignificance")
 def historicalsignificance():
-    return render_template("historicalsignificance.html)
+    return render_template("historicalsignificance.html")
 
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
