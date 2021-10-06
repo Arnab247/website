@@ -58,6 +58,10 @@ def biology30S():
 def ivy():
     return render_template("ivy.html")
 
+@app.route("/historicalthinkingassignment")
+def historicalthinkingassignment():
+    return render_template("primaryevidence.html")
+
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
     global userName
