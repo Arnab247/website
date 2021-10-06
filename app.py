@@ -82,7 +82,9 @@ def historicalperspective():
 def ethicaldimensions():
     return render_template("ethicaldimensions.html")
 
-
+@app.route("/primaryevidence")
+def primaryevidence():
+    return render_template("primaryevidence.html")
 
 
 @app.route("/<name>", methods=["GET", "POST"])
