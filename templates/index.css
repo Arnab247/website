@@ -1,0 +1,167 @@
+body{
+    background-color: whitesmoke;
+}
+
+.title{
+    text-align: center;
+}
+
+.evidencepic{
+    border: 5px solid black;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.image1text{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: cadetblue;
+}
+
+.locationtagpic{
+    border: 5px solid black;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.primaryevidence{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: cadetblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.historicalsignificance{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: coral;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.historicalsignificancetext{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: coral;
+}
+
+.continuityandchange{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: royalblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+.continuityandchangetext{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: royalblue;
+}
+
+.causeandconsequence{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: palevioletred;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.causeandconsequencetext{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: palevioletred;
+}
+
+.historicalperspective{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: rgb(39, 172, 127);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.historicalperspectivetext{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: rgb(39, 172, 127);
+}
+
+.ethicaldimensions{
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: goldenrod;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.ethicaldimensionstext{
+    margin: 5%;
+    margin-top: 0%;
+    padding: 2%;
+    text-align: justify;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: goldenrod;
+}
+
+.button{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.buttontop{
+    text-align: center;
+}
