@@ -71,7 +71,7 @@ def continuityandchange():
     return render_template("continuityandchange.html")
 
 @app.route("/causeandconsequence")
-def historicalsignificance():
+def causeandconsequence():
     return render_template("causeandconsequence.html")
 
 @app.route("/historicalperspective")
