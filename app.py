@@ -62,6 +62,10 @@ def ivy():
 def historicalthinkingassignment():
     return render_template("primaryevidence.html")
 
+@app.route("/historicalsignificance")
+def historicalsignificance():
+    return render_template("historicalsignificance.html)
+
 @app.route("/<name>", methods=["GET", "POST"])
 def hello(name):
     global userName
